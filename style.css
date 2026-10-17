@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input{
+    width: 100%;
+    height: 20px;
+    border: none;
+    outline: none;
+    background-color: #111;
+    margin: 4px 4px;
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+input:focus,input:hover{
+    background-color: black;
+    transform: scale(1.05);
+}
+
+button{
+    height: 30px;
+    margin: 5px 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #990094;
+    color: #fff;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+button:hover{
+    background-color: #ff00f7;
+    transform: scale(1.02);
+    letter-spacing: 1px;
+}
+
+.cruds{
+    width: 80%;
+    margin: auto;
+    
+    .head{
+        text-align: center;
+        text-transform: uppercase;
+        margin: 10px 0;
+    }
+
+    .inputs{
+        .tot{
+            justify-content: center;
+            display: flex;
+            display: flex;
+            gap: 4px;
+            width: 100%;
+            input{
+                width: 20%;
+            }
+            .total{
+                background-color: rgb(104, 1, 1);
+                padding: 0px 10px;
+                height: 35px;
+                line-height: 35px;
+                border-radius: 4px;
+                white-space: nowrap;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                box-sizing: border-box;
+            }
+            .total::before{
+                content: "Total :";
+            }
+        }
+
+        button{
+            width: 100%;
+        }
+    }
+    .search{
+        width: 100%;
+        .search-btns{
+            width: 100%;
+            display: flex;
+            margin-top: 5px;
+            justify-content: space-between;
+            button{
+                width: 45%;
+                margin: 0;
+            }
+        }
+    }
+
+    .delete-all{
+        width: 100%;
+        button{
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+
+    .outputs{
+        width: 100%;
+        overflow-x: auto;
+        table{
+            width: 100%;
+            text-align: center;
+            margin: 10px 0;
+            border-collapse: collapse;
+            
+            th{
+                text-transform: uppercase;
+                background-color: #111;
+            } 
+            td,th{
+                padding: 8px 5px;
+                font-size: 15px;
+                border-bottom: 1px solid #444;
+            }
+            button{
+                padding: 5px;
+            }
+        }
+    }
+}
