@@ -71,13 +71,15 @@ create.addEventListener('click',()=>{
     };
     if(updateIdx === -1)
     {
-        let prodCount = count.value > 1 ? count.value : 1;
-        for(let i = 0; i < prodCount;i ++){
-            dataProdacts.push(newPr);
-        }
+        if(title.value !== '' && price.value !== '' && cat.value !== ''){
+            let prodCount = count.value > 1 ? count.value : 1;
+            for(let i = 0; i < prodCount;i ++){
+                dataProdacts.push(newPr);
+            }
 
-        //save all the products in local storage
-        localStorage.products = JSON.stringify(dataProdacts);
+            //save all the products in local storage
+            localStorage.products = JSON.stringify(dataProdacts);
+        }
     }
     else{
         dataProdacts[updateIdx] = newPr;
