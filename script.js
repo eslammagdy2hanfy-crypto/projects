@@ -116,9 +116,9 @@ function showData(word = ''){
     }
     let table = '';
     for(let i = 0;i < n; i++){
-        if(word !== '' && searchMood === 'title' && word !== dataProdacts[i].title) continue;
-        if(word !== '' && searchMood === 'category' && word !== dataProdacts[i].category) continue;
-        
+        if(word !== '' && searchMood === 'title' && !dataProdacts[i].title.includes(word)) continue;
+        if(word !== '' && searchMood === 'category' && !dataProdacts[i].category.includes(word)) continue;
+         
         table += `
             <tr>
                 <td>${i+1}</td>
