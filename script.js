@@ -116,19 +116,19 @@ function showData(word = ''){
     }
     let table = '';
     for(let i = 0;i < n; i++){
-        if(word !== '' && searchMood === 'title' && !dataProdacts[i].title.includes(word)) continue;
-        if(word !== '' && searchMood === 'category' && !dataProdacts[i].category.includes(word)) continue;
-         
+        if(word !== '' && searchMood === 'title' && !dataProdacts[i].title.includes(word.toLowerCase())) continue;
+        if(word !== '' && searchMood === 'category' && !dataProdacts[i].category.includes(word.toLowerCase())) continue;
+        
         table += `
             <tr>
                 <td>${i+1}</td>
-                <td>${dataProdacts[i].title}</td>
+                <td>${dataProdacts[i].title.toLowerCase()}</td>
                 <td>${dataProdacts[i].price}</td>
                 <td>${dataProdacts[i].taxes}</td>
                 <td>${dataProdacts[i].ads}</td>
                 <td>${dataProdacts[i].discount}</td>
                 <td>${dataProdacts[i].total}</td>
-                <td>${dataProdacts[i].category}</td>
+                <td>${dataProdacts[i].category.toLowerCase()}</td>
                 <td><button onclick="updateData(${i})" class="update">update</button></td>
                 <td><button onclick="removeData(${i})" class="delete">delete</button></td>
             </tr>
